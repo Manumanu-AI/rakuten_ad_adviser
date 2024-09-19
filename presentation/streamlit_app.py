@@ -36,13 +36,16 @@ default_product_info = """商品名 :
 """
 
 def main():
-    st.markdown("""
-    <style>
-    div[class^="block-container"] {
-        padding-top: 1rem;
-    }
-    </style>
-    """, unsafe_allow_html=True)
+    st.markdown(
+            """
+        <style>
+        div[class^="block-container"] {
+            padding-top: 0rem;
+        }
+        </style>
+        """,
+            unsafe_allow_html=True,
+    )
     st.title('楽天広告枠アドバイザー')
 
     recommender_service = AdRecommenderService()
@@ -56,7 +59,7 @@ def main():
     with tab1:
         # メインの機能
         col1, col2 = st.columns(2)
-        
+
         with col1:
             st.header("商品情報入力")
             user_input = st.text_area("商品情報を入力してください：", value=default_product_info, height=400)
