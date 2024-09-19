@@ -36,6 +36,13 @@ default_product_info = """商品名 :
 """
 
 def main():
+    st.markdown("""
+    <style>
+    div[class^="block-container"] {
+        padding-top: 1rem;
+    }
+    </style>
+    """, unsafe_allow_html=True)
     st.title('楽天広告枠アドバイザー')
 
     recommender_service = AdRecommenderService()
