@@ -40,7 +40,7 @@ def main():
             """
         <style>
         div[class^="block-container"] {
-            padding-top: 0rem;
+            padding-top: 1rem;
         }
         </style>
         """,
