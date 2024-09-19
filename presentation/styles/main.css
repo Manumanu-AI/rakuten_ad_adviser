@@ -1,8 +1,3 @@
-/* 上部スペースを調整するスタイル */
-div[class^="block-container"] {
-    padding-top: 2rem;
-}
-
 .stButton > button {
     background-color: #FF4B4B;
     color: white;
