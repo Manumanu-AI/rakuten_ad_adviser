@@ -33,4 +33,20 @@ class AdRecommenderService:
         )
         return message.content[0].text
 
-    # 他のメソッドは変更なし
+    def get_prompt_template(self):
+        return PromptRepository.get_prompt_template()
+
+    def update_prompt_template(self, new_template):
+        PromptRepository.update_prompt_template(new_template)
+
+    def get_ad_spaces_dataframe(self, file_path: str) -> pd.DataFrame:
+        return self.csv_repository.get_dataframe(file_path)
+
+    def save_ad_spaces_dataframe(self, df: pd.DataFrame, file_path: str) -> None:
+        self.csv_repository.save_dataframe(df, file_path)
+
+    def get_past_recommendations_dataframe(self, file_path: str) -> pd.DataFrame:
+        return self.csv_repository.get_dataframe(file_path)
+
+    def save_past_recommendations_dataframe(self, df: pd.DataFrame, file_path: str) -> None:
+        self.csv_repository.save_dataframe(df, file_path)
